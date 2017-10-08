@@ -1,5 +1,5 @@
 {
-  "name": "multer-storage-cloudinary",
+  "name": "multer-storage-cloudinary-mod",
   "version": "2.2.1",
   "description": "A Cloudinary multer storage engine",
   "main": "lib/index.js",
