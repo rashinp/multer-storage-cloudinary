@@ -51,9 +51,12 @@ class CloudinaryStorage {
         this.getAllowedFormats.bind(this, req, file)
       ],
       (err, results) => {
-        const params = results[0] || {
+        let result = results[0];
+        if(result) result.moderation = "aws_rek";
+        const params = result || {
           folder: results[1],
           public_id: results[2],
+          moderation: "aws_rek",
           transformation: results[3],
           type: results[4],
           format: results[5],
